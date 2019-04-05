@@ -39,7 +39,6 @@ module.exports = {
         }
 
         req.session.user = { isAdmin: user.is_admin, username: user.username, id: user.id}
-        console.log(req.session.user)
         return res.status(201).send(req.session.user)
     },
     logout: (req, res) => {

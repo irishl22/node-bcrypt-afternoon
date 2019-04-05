@@ -21,8 +21,8 @@ module.exports = {
     },
     getAllTreasure: async (req, res) => {
         const db = req.app.get('db')
-        response = await db.get_all_treasure()
-
-        return res.status(200).send(response)
+        response = await db.get_all_treasure();
+        console.log(response)
+        // return res.status(200).send(response)
     }
 }

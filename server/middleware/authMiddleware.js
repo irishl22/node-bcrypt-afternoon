@@ -5,5 +5,11 @@ module.exports = {
             res.status(401).send('Please login')
         }
         next()
+    },
+    adminsOnly: (req, res, next) => {
+        if(!req.session.user) {
+            res.status(403).send('Not Admin')
+        }
+        next()
     }
 }
